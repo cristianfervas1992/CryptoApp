@@ -1,0 +1,59 @@
+<h1>Prueba de obtencion de datos de mi super proyecto de tesis</h1>
+<p><%= @coinName %> </p>
+    <!-- 
+    <div>
+        <p>Simbolo de las monedas a las que se posee acceso</p>
+        <% @symbols.Data.each do |t| %>
+           <ul>
+                <%= t.first %>
+           </ul> 
+        <% end %>
+    </div>
+    
+    <div>
+        <p>Nombre de las monedas a las que se tiene acceso</p>
+        <% @symbols.Data.each do |t| %>
+            <ul>
+                <p><%= t.second.FullName %></p>
+                <p><%= t.second.ImageUrl%></p>
+                <p><%= t.second.Symbol%></p>
+                <p><%= t.second.CoinName %></p>
+            </ul>
+        <% end %>
+    </div>
+    
+    
+    <div>
+        <p>Las monedas de Cryptsy son: </p>
+            <ul>
+                <p><%= @Cyptsy %></p>
+            </ul>
+    </div>
+
+    <div>
+        <p>Todos los mercados que posee Bitcoin para el par BTC-USD</p>
+        <p>
+            <% @coinsnap.Data.Exchanges.each do |t| %>
+            <p> 
+                <%=t.MARKET.to_s.split("#<Hashie::Mash").to_s.split("=#<Hashie::Array").to_s.gsub('\\', '').gsub(']','').gsub('[','').gsub('"','') %>
+            </p> 
+            <% end %>   
+        </p>
+    </div>
+    -->    
+    <div>
+        <p>Nombre de las exchanges a las que se tiene acceso</p>
+        <% @exchanges.each do |t| %>
+        <ul>
+            <p> <%= t.first %> </p>
+            <p> Y sus monedas son </p>
+            <p><%= t.second.length.to_i%></p>
+            <p> <%= t.second.to_s.split("#<Hashie::Mash").to_s.split("=#<Hashie::Array").to_s.split(">").to_s.gsub('\\', '').gsub('"','').gsub(',','') %> </p>
+        </ul>
+        <% end %>
+    </div>
+    
+ 
+
+
+
