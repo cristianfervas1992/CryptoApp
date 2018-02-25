@@ -1,8 +1,10 @@
 <div>
+    <p><%=@exchanges.count %></p>
     <p>Nombre de las exchanges a las que se tiene acceso</p>
     <% @exchange.each do |t| %>
     <ul>
-        <p> <%= t.name %> </p>
+        <p>Nombre: <%= t.name %> </p>
+        
     </ul>
     <% end %>
 </div>
