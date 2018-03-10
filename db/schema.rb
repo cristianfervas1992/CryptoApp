@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180310030037) do
+ActiveRecord::Schema.define(version: 20180310035411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,15 +36,15 @@ ActiveRecord::Schema.define(version: 20180310030037) do
   create_table "cryptocurrencies_exchanges", force: :cascade do |t|
     t.bigint "exchange_id"
     t.bigint "cryptocurrency_id"
-    t.string "last_update"
-    t.decimal "last_volume"
-    t.decimal "change"
-    t.decimal "last_price"
-    t.decimal "high_day"
-    t.decimal "low_day"
-    t.date "added"
     t.index ["cryptocurrency_id"], name: "index_cryptocurrencies_exchanges_on_cryptocurrency_id"
     t.index ["exchange_id"], name: "index_cryptocurrencies_exchanges_on_exchange_id"
+  end
+
+  create_table "cryptocurrencies_users", id: false, force: :cascade do |t|
+    t.bigint "cryptocurrency_id", null: false
+    t.bigint "user_id", null: false
+    t.index ["cryptocurrency_id"], name: "index_cryptocurrencies_users_on_cryptocurrency_id"
+    t.index ["user_id"], name: "index_cryptocurrencies_users_on_user_id"
   end
 
   create_table "exchanges", force: :cascade do |t|
