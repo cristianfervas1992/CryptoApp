@@ -9,6 +9,9 @@ class CurrenciesController < ApplicationController
     @price = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('BTC', 'USD'))
     @price_btc = Hashie::Mash.new(Cryptocompare::Price.find('BTC', 'USD', {'e' => 'LocalBitcoins'}))
     @fullPrice = Cryptocompare::Price.full('BTC', 'USD')
+    #AddExchanges()
+    #AddCurrencies()
+    #RelationCurrencyExchange()
     #@Cyptsy = Cryptocompare::Price.find('007', 'BTC', {'e' => 'Cryptsy'})
     #@Coin = Cryptocompare::Price.full('BTC', 'USD')
     #@coinName = params[:coinName]
@@ -23,7 +26,21 @@ class CurrenciesController < ApplicationController
 
   def AddExchanges
     @exchanges.each do |t|
-      Exchange.create(name: t.first.to_s, coins_number: t.second.length.to_i)
+      Exchange.create(name: t.first.to_s, coins_number: t.second.count.to_i)
+    end
+  end
+
+  def RelationCurrencyExchange
+    @exchanges.each do |t|
+      if(!Exchange.find_by(name: t.first.to_s).nil?)
+        exchange = Exchange.find_by(name: t.first.to_s).id
+        t.second.each do |u|
+          if(!currency = Cryptocurrency.find_by(symbol: u.first.to_s).nil?)
+            currency = Cryptocurrency.find_by(symbol: u.first.to_s).id
+            CryptocurrencyExchange.create(exchange_id: exchange, cryptocurrency_id: currency)
+          end
+        end
+      end
     end
   end
 
