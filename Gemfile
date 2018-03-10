@@ -61,3 +61,6 @@ gem 'whenever', :require => false
 
 # Hashie is a collection of classes and mixins that make hashes more powerful.
 gem 'hashie', '3.5.7'
+
+# Flexible authentication solution for Rails with Warden.
+gem 'devise', '4.4.1'

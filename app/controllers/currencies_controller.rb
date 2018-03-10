@@ -7,7 +7,8 @@ class CurrenciesController < ApplicationController
     @exchangeName = Exchange.all
     @currencies = Cryptocurrency.all
     @price = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('BTC', 'USD'))
-    @price_btc= Hashie::Mash.new(Cryptocompare::Price.find('BTC', 'USD', {'e' => 'LocalBitcoins'}))
+    @price_btc = Hashie::Mash.new(Cryptocompare::Price.find('BTC', 'USD', {'e' => 'LocalBitcoins'}))
+    @fullPrice = Cryptocompare::Price.full('BTC', 'USD')
     #@Cyptsy = Cryptocompare::Price.find('007', 'BTC', {'e' => 'Cryptsy'})
     #@Coin = Cryptocompare::Price.full('BTC', 'USD')
     #@coinName = params[:coinName]

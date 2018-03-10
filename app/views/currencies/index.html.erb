@@ -1,6 +1,7 @@
 <h1>Prueba de obtencion de datos de mi super proyecto de tesis</h1>
     <div>
         <p><%=@price_btc%></p>
+        <p><%=@fullPrice%></p>
         <p><%=@price.Data.Exchanges.count%></p>
         <%@price.Data.Exchanges.each do |t|%>
         <P>Mercado:<%=t.MARKET%></P>
