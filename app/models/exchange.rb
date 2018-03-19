@@ -1,3 +1,4 @@
 class Exchange < ApplicationRecord
-    has_many :cryptocurrency_exchanges
+    has_many :cryptoexchanges
+	has_many :cryptocurrencies, through: :cryptoexchanges
 end

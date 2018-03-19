@@ -9,4 +9,10 @@ class ExchangesController < ApplicationController
     @exchange = Exchange.find(params[:id])
   end
 
+  def showCoins (nombre)
+    mercado = Exchange.find_by(name: nombre)
+    @monedas = mercado.cryptocurrencies.each do |t|
+      t.name      
+    end
+  end
 end

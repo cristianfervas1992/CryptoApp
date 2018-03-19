@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cryptocurrency_id: 1
+  exchange_id: 1
+  alarm_id: 1
+
+two:
+  cryptocurrency_id: 1
+  exchange_id: 1
+  alarm_id: 1

@@ -37,7 +37,7 @@ class CurrenciesController < ApplicationController
         t.second.each do |u|
           if(!currency = Cryptocurrency.find_by(symbol: u.first.to_s).nil?)
             currency = Cryptocurrency.find_by(symbol: u.first.to_s).id
-            CryptocurrencyExchange.create(exchange_id: exchange, cryptocurrency_id: currency)
+            Cryptoexchange.create(exchange_id: exchange, cryptocurrency_id: currency)
           end
         end
       end
@@ -48,6 +48,12 @@ class CurrenciesController < ApplicationController
     @currencies = Cryptocurrency.find(params[:id])
   end
 
+  def showMarkets (nombre)
+    moneda = Cryptocurrency.find_by(name: nombre)
+    @mercados = moneda.exchanges.each do |t|
+      t.name      
+    end
+  end
 
 end
 
