@@ -1,15 +1,22 @@
 <div>
-        <p>lalalalal</p>
+        <p>Monedas de Bittrex</p>
         <div>
             <%mercadito = Exchange.find_by(name: "BitTrex")%>
             <%@monedas = mercadito.cryptocurrencies.each do |t|%>
-            <p><%=t.name%></p>       
+                <p><%=t.name%></p>       
             <%end%>
-            %>  
-          
+            <p>Mercados de Ethereum</p>
+            <%moneda = Cryptocurrency.find_by(name: "Ethereum")%>
+            <%@mercados = moneda.exchanges.each do |t| %>
+                <p><%=t.name%></p>
+                <%valor=Cryptocompare::Price.find('ETH', 'BTC', {'e' => t.name})%>
+                    <p><%=precio=valor%></p>                
+            <%end%>
             
         </div>
 </div>
+
+
 <!--
 <h1>Prueba de obtencion de datos de mi super proyecto de tesis</h1>
     <div>

@@ -54,7 +54,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #A Ruby gem for finding cryptocurrency prices by using the CryptoCompare API.
-gem 'cryptocompare', '0.13.0'
+gem 'cryptocompare', '0.14.0'
 
 #Cron jobs in Ruby 
 gem 'whenever', :require => false

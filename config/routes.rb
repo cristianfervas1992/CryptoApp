@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'news' => 'news#index'
   get 'exchanges'=>'exchanges#index'
   get '/exchanges/:id', to: 'exchanges#show', as: 'exchange'
   get 'currencies'=>'currencies#index'
