@@ -1,2 +1,6 @@
-<p> Los ids de las exchanges van desde el 171 hasta el 255</p>
+<p> Los ids de las exchanges van desde el 256 hasta el 346</p>
 <p> <%= @exchange.name  %> </p>
+<p> Monedas: </p>
+<% @exchange.cryptocurrencies.each do |t| %>
+<p> <%= t.name %> </p>
+<%end %>

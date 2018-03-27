@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  mount V1::Root => '/'
+  root to: 'exchanges#index'
   get 'news' => 'news#index'
   get 'exchanges'=>'exchanges#index'
   get '/exchanges/:id', to: 'exchanges#show', as: 'exchange'

@@ -64,3 +64,9 @@ gem 'hashie', '3.5.7'
 
 # Flexible authentication solution for Rails with Warden.
 gem 'devise', '4.4.1'
+
+#An opinionated framework for creating REST-like APIs in Ruby.
+gem 'grape', '1.0.2'
+
+# An API focused facade that sits on top of an object model.
+gem 'grape-entity', '0.7.1'

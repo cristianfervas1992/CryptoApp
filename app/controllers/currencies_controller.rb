@@ -2,13 +2,11 @@ class CurrenciesController < ApplicationController
 
   def index  
     #@coinsnap = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('ETH', 'USD'))
-    @symbols = Hashie::Mash.new(Cryptocompare::CoinList.all) 
-    @exchanges = Hashie::Mash.new(Cryptocompare::Exchanges.all)
     @exchangeName = Exchange.all
     @currencies = Cryptocurrency.all
-    @price = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('BTC', 'USD'))
-    @price_btc = Hashie::Mash.new(Cryptocompare::Price.find('BTC', 'USD', {'e' => 'LocalBitcoins'}))
-    @fullPrice = Cryptocompare::Price.full('BTC', 'USD')
+    #@price = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('BTC', 'USD'))
+    #@price_btc = Hashie::Mash.new(Cryptocompare::Price.find('BTC', 'USD', {'e' => 'LocalBitcoins'}))
+    #@fullPrice = Cryptocompare::Price.full('BTC', 'USD')
     #AddExchanges()
     #AddCurrencies()
     #RelationCurrencyExchange()
@@ -18,19 +16,25 @@ class CurrenciesController < ApplicationController
     #.to_s.split("#<Hashie::Mash").to_s.split("=#<Hashie::Array").to_s.split(">").to_s.gsub('\\', '').gsub('"','').gsub(',','')
   end
 
-  def AddCurrencies 
+  def AddCurrencies
+    Cryptocurrency.delete_all
+    @symbols = Hashie::Mash.new(Cryptocompare::CoinList.all) 
     @symbols.Data.each do |t|
       Cryptocurrency.create(id: t.second.Id, name: t.second.CoinName.to_s, fullname: t.second.FullName.to_s, img_url: t.second.ImageUrl.to_s, symbol:  t.second.Symbol.to_s)
     end
   end
 
   def AddExchanges
+    Exchange.delete_all
+    @exchanges = Hashie::Mash.new(Cryptocompare::Exchanges.all)
     @exchanges.each do |t|
       Exchange.create(name: t.first.to_s, coins_number: t.second.count.to_i)
     end
   end
 
   def RelationCurrencyExchange
+    Cryptoexchange.delete_all
+    @exchanges = Hashie::Mash.new(Cryptocompare::Exchanges.all)
     @exchanges.each do |t|
       if(!Exchange.find_by(name: t.first.to_s).nil?)
         exchange = Exchange.find_by(name: t.first.to_s).id
