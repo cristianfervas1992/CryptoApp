@@ -1,6 +1,8 @@
 module V1
     module Entities
         class NewEntity < Grape::Entity
+            expose :id
+            expose :source
             expose :title
             expose :language
             expose :url

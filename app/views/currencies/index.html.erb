@@ -1,59 +1,17 @@
-<div>
-        <p>Monedas de Bittrex</p>
-        <div>
-            <%mercadito = Exchange.find_by(name: "BitTrex")%>
-            <%@monedas = mercadito.cryptocurrencies.each do |t|%>
-                <p><%=t.name%></p>       
-            <%end%>
-            <p>Mercados de Ethereum</p>
-            <%moneda = Cryptocurrency.find_by(name: "Ethereum")%>
-            <%@mercados = moneda.exchanges.each do |t| %>
-                <p><%=t.name%></p>
-                <%valor=Cryptocompare::Price.find('ETH', 'BTC', {'e' => t.name})%>
-                    <p><%=precio=valor%></p>                
-            <%end%>
-            
-        </div>
-</div>
-
-
-<!--
-<h1>Prueba de obtencion de datos de mi super proyecto de tesis</h1>
+ <div>
+    <p>Monedas de Bittrex</p>
     <div>
-        <% @symbols.Data.each do |t| %>
-        <p>
-            <%=t.first%>
-        </p>
-        <p>
-            Y su id es
-            <%=t.second.Id%>
-        </p>
-        <% end %>
-        
-    </div>
-
-    
-    <div>
-        <p><%=@price.Data.Exchanges.count%></p>
-        <%@price.Data.Exchanges.each do |t|%>
-        <P>Mercado:<%=t.MARKET%></P>
-        <P>Precio:<%=t.PRICE%></P>
-        <P>Ultimo Volumen: <%=t.LASTVOLUME%></P>
-        <P>Actualizacion: <%=t.LASTUPDATE%></P>
+        <%mercadito = Exchange.find_by(name: "BitTrex")%>
+        <%@monedas = mercadito.cryptocurrencies.each do |t|%>
+            <p><%=t.name%></p>       
         <%end%>
-
+        <p>Mercados de Ethereum</p>
+        <%moneda = Cryptocurrency.find_by(name: "Ethereum")%>
+        <%@mercados = moneda.exchanges.each do |t| %>
+            <p><%=t.name%></p>
+            <%valor=Cryptocompare::Price.find('ETH', 'BTC', {'e' => t.name})%>
+            <p><%=precio=valor%></p>                
+        <%end%>
+            
     </div>
-
-    <div>
-        <p>Nombre de las exchanges a las que se tiene acceso</p>
-        <% @exchanges.each do |t| %>
-        <ul>
-            <p> Nombre: <%= t.first %> </p>
-            <p>Y tiene <%= t.second.length.to_i%> monedas</p>
-            <%t.second.each do |u|%>
-                <p><%=u.first.to_s%></p>   
-            <%end%>
-        </ul>
-        <% end %>
-    </div>
--->
+</div>

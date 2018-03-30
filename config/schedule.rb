@@ -16,8 +16,13 @@
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
 # end
-
-every 1.minute do
-    rake "index"
-end
+#set :output, 'log/whenever.log'
+#every 1.minute do
+#    rake "prueba:demo"
+#end
+#--------------------------------------------------------------
+#set :output, 'log/whenever.log'
+#every 1.minute do
+#    rake "price:demo", environment => "development"
+#end
 # Learn more: http://github.com/javan/whenever
