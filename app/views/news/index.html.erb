@@ -17,16 +17,15 @@
 <%}%> 
 -->
 <p>Noticias</p>
-
 <%@news.each do |t|%>
-<p>Nombre: <%=t.source%></p>    
-<p>Logo: <%=t.source_img%></p> 
-<p>Lenguaje: <%=t.language%></p>    
-<p>Titulo: <%=t.title%></p>    
-<p>URL: <%=t.url%></p>    
-<p>Noticia: <%=t.body%></p>    
-<p>Publicada: <%=Time.at(t.published_on)%></p>    
-<p>Imagen: <%=t.image_url%></p>    
-<p>Categoria: <%=t.categories%></p>    
-<p>Tags: <%=t.tags%></p>    
+    <p>Nombre: <%=t.source%></p>    
+    <p>Logo: <%=t.source_img%></p> 
+    <p>Lenguaje: <%=t.language%></p>    
+    <p>Titulo: <%=t.title%></p>    
+    <p>URL: <%=t.url%></p>    
+    <p>Noticia: <%=t.body%></p>    
+    <p>Publicada: <%=Time.at(t.published_on)%></p>    
+    <p>Imagen: <%=t.image_url%></p>    
+    <p>Categoria: <%=t.categories%></p>    
+    <p>Tags: <%=t.tags%></p>    
 <%end%>

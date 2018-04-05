@@ -5,14 +5,12 @@ module V1
                 present New.all, with: Entities::NewEntity
             end
 
-            desc 'Return a New by a source name'
-            params do
-                requires :source
+            get ':id' do
+                present New.find(params[:id])
             end
-            route_param :source do
-                get do
-                    New.find(params[:source])
-                end
+
+            get ':id/source' do
+                present New.find(params[:id]).source
             end
 
             post do

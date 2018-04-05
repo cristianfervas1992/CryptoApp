@@ -14,6 +14,7 @@ module V1
 		mount V1::Exchanges
 		mount V1::Users
 		mount V1::News
+		mount V1::Cryptoexchanges
 
 
 	end

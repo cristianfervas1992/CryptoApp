@@ -25,4 +25,15 @@
 #every 1.minute do
 #    rake "price:demo", environment => "development"
 #end
+set :output, 'log/whenever2.log'
+every 5.minute do
+    rake "eth:demo", environment => "development"
+end
+
+set :output, 'log/news.log'
+every 8.hours do
+    rake "news:demo", environment => "development"
+end
+#Comando para actualizar la cron tab: whenever -w --set environment=development
+#Agregar environment => "development" al rake task in schedule.rb
 # Learn more: http://github.com/javan/whenever

@@ -5,17 +5,21 @@ module V1
             get do
                 present Cryptocurrency.all, with: Entities::CryptocurrencyEntity
             end
-            
-            desc 'Return a Cryptocurrency by a Id'
-            params do
-                requires :id
+
+            get ':id' do
+                present Cryptocurrency.find(params[:id])
             end
-            route_param :id do
-                get do
-                    Cryptocurrency.find(params[:id])
-                end
+
+            get ':id/exchanges' do
+                currency = Cryptocurrency.find(params[:id])
+                present currency.exchanges
             end
-            
+
+            get ':id/prices' do
+                currency = Cryptocurrency.find(params[:id])
+                present currency.cryptoexchanges
+            end
+
             post do
                 Cryptocurrency.create_with_params(params)
             end

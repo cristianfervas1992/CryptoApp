@@ -6,16 +6,14 @@ module V1
                 present Exchange.all, with: Entities::ExchangeEntity
             end
 
-            desc 'Return a Exchange by a Id'
-            params do
-                requires :id
-            end
-            route_param :id do
-                get do
-                    Exchange.find(params[:id])
-                end
+            get ':id' do
+                present Exchange.find(params[:id])
             end
 
+            get ':id/cryptocurrencies' do
+                exchange = Exchange.find(params[:id])
+                present exchange.cryptocurrencies
+            end
             post do
                 Exchange.create_with_params(params)
             end
