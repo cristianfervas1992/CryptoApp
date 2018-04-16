@@ -21,15 +21,82 @@
 #    rake "prueba:demo"
 #end
 #--------------------------------------------------------------
-#set :output, 'log/whenever.log'
-#every 1.minute do
-#    rake "price:demo", environment => "development"
-#end
-set :output, 'log/whenever2.log'
-every 5.minute do
-    rake "eth:demo", environment => "development"
+
+set :output, 'log/eth.log'
+every 2.minute do
+  rake 'eth:demo', environment => 'development'
+end
+=begin
+set :output, 'log/btc.log'
+every 2.minute do
+    rake "btc:demo", environment => "development"
 end
 
+set :output, 'log/ltc.log'
+every 2.minute do
+    rake "ltc:demo", environment => "development"
+end
+
+set :output, 'log/xrp.log'
+every 2.minute do
+    rake "xrp:demo", environment => "development"
+end
+
+set :output, 'log/xmr.log'
+every 2.minute do
+    rake "xmr:demo", environment => "development"
+end
+
+set :output, 'log/doge.log'
+every 2.minute do
+    rake "doge:demo", environment => "development"
+end
+
+set :output, 'log/nxt.log'
+every 2.minute do
+    rake "nxt:demo", environment => "development"
+end
+
+set :output, 'log/nem.log'
+every 2.minute do
+    rake "nem:demo", environment => "development"
+end
+
+set :output, 'log/blk.log'
+every 2.minute do
+    rake "blk:demo", environment => "development"
+end
+
+set :output, 'log/pot.log'
+every 2.minute do
+    rake "pot:demo", environment => "development"
+end
+
+set :output, 'log/verge.log'
+every 2.minute do
+    rake "verge:demo", environment => "development"
+end
+
+set :output, 'log/neo.log'
+every 2.minute do
+    rake "neo:demo", environment => "development"
+end
+
+set :output, 'log/gnt.log'
+every 2.minute do
+    rake "gnt:demo", environment => "development"
+end
+
+set :output, 'log/ios.log'
+every 2.minute do
+    rake "ios:demo", environment => "development"
+end
+
+set :output, 'log/ont.log'
+every 2.minute do
+    rake "ont:demo", environment => "development"
+end
+=end
 set :output, 'log/news.log'
 every 8.hours do
     rake "news:demo", environment => "development"

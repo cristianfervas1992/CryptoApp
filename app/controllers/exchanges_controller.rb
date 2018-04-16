@@ -1,7 +1,6 @@
 class ExchangesController < ApplicationController
   def index
     @exchange = Exchange.all
-    
     @exchange.where(name: 'Coinbase')
   end
 

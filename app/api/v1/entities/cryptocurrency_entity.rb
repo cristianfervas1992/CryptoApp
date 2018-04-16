@@ -6,6 +6,7 @@ module V1
             expose :symbol
             expose :fullname
             expose :img_url
+            expose :updated_at
         end
     end
 end

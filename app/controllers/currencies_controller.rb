@@ -1,19 +1,24 @@
 class CurrenciesController < ApplicationController
 
   def index  
-    #@coinsnap = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('ETH', 'USD'))
+    require 'httparty'
+    # @coinsnap = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('ETH', 'USD'))
     @exchangeName = Exchange.all
     @currencies = Cryptocurrency.all
-    #@price = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('BTC', 'USD'))
-    #@price_btc = Hashie::Mash.new(Cryptocompare::Price.find('BTC', 'USD', {'e' => 'LocalBitcoins'}))
-    #@fullPrice = Cryptocompare::Price.full('BTC', 'USD')
-    #AddExchanges()
-    #AddCurrencies()
-    #RelationCurrencyExchange()
-    #@Cyptsy = Cryptocompare::Price.find('007', 'BTC', {'e' => 'Cryptsy'})
-    #@Coin = Cryptocompare::Price.full('BTC', 'USD')
-    #@coinName = params[:coinName]
-    #.to_s.split("#<Hashie::Mash").to_s.split("=#<Hashie::Array").to_s.split(">").to_s.gsub('\\', '').gsub('"','').gsub(',','')
+    #Variacion de precio de bitcoin cada 5 min
+    response = HTTParty.get('http://coincap.io/history/1day/DOGE')
+    response.parsed_response
+    @obj=Hashie::Mash.new(response)
+    # @price = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('BTC', 'USD'))
+    # @price_btc = Hashie::Mash.new(Cryptocompare::Price.find('BTC', 'USD', {'e' => 'LocalBitcoins'}))
+    # @fullPrice = Cryptocompare::Price.full('BTC', 'USD')
+    # AddExchanges()
+    # AddCurrencies()
+    # RelationCurrencyExchange()
+    # @Cyptsy = Cryptocompare::Price.find('007', 'BTC', {'e' => 'Cryptsy'})
+    # @Coin = Cryptocompare::Price.full('BTC', 'USD')
+    # @coinName = params[:coinName]
+    # .to_s.split("#<Hashie::Mash").to_s.split("=#<Hashie::Array").to_s.split(">").to_s.gsub('\\', '').gsub('"','').gsub(',','')
   end
 
   def AddCurrencies

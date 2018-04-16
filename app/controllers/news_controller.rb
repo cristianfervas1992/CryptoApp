@@ -7,7 +7,7 @@ class NewsController < ApplicationController
   def AddNews
     New.delete_all
     news = Cryptocompare::News.all
-    noticias = news.map{|t|
+    news.map{|t|
       noticia = Hashie::Mash.new(t)
         New.create(
           id: noticia.id,

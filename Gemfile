@@ -70,3 +70,6 @@ gem 'grape', '1.0.2'
 
 # An API focused facade that sits on top of an object model.
 gem 'grape-entity', '0.7.1'
+
+# Makes http fun again! 
+gem 'httparty', '0.16.2'

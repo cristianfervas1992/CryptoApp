@@ -1,21 +1,12 @@
- <div>
-    <p>Monedas de Bittrex</p>
-<div>
-        <p>Mercados de Ethereum</p>
-        <%markets=Array.new%>
-        <%moneda = Cryptocurrency.find_by(name: "Litecoin")%>
-        <%@mercados = moneda.exchanges.each do |t| %>
-            <%markets.push(t.name)%>
-        <%end%>
-        <%markets.each do |t|%>
-        <p>      
-            <%=t%>
-            <%valor = Hashie::Mash.new(Cryptocompare::Price.find([moneda.symbol],['USD','BTC'], {'e' => t}))%>
-            <%if valor.respond_to? ('Response')%>     
-                <%valor = Hashie::Mash.new(Cryptocompare::Price.find([moneda.symbol],['BTC'], {'e' => t}))%>    
-            <%end%>
-            <p><%=valor%></p>             
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currencyid="1" data-base="USD" data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1027" data-base="USD" data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="false"></div>
+<div>  
+    <%@obj.price.each do |t|%>
+        <p>
+        Fecha : <%=DateTime.strptime(t.first.to_s,'%Q').getlocal("-03:00")%>
+        Precio: <%=t.second%>
         </p>
-        <%end%>
-    </div>
+    <%end%>
 </div>
