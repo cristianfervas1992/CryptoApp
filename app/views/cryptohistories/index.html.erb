@@ -1,0 +1,11 @@
+<h1>Cryptohistory#index</h1>
+<div>
+    <%@json.Data.each do |t|%>
+        <p>Date=<%=Time.at(t.time)%></p>
+        <p>Cierre=<%=t.close%></p>
+        <p>Alto=<%=alto=t.high%></p>
+        <p>Bajo=<%=bajo=t.low%></p>
+        <p>Abrio=<%=t.open%></p>
+        <p>Promedio=<%=avg=(alto+bajo)/2%></p>
+    <%end%>
+</div>

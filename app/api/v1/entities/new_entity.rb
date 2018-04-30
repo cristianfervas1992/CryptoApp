@@ -11,6 +11,8 @@ module V1
             expose :body
             expose :published_on
             expose :categories
+            expose :created_at
+            expose :updated_at
         end
     end
 end

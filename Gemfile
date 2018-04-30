@@ -73,3 +73,6 @@ gem 'grape-entity', '0.7.1'
 
 # Makes http fun again! 
 gem 'httparty', '0.16.2'
+
+# Simple WebSocket Client on Ruby 
+gem 'websocket-client-simple','0.3.0'

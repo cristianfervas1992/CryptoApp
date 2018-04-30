@@ -1,0 +1,10 @@
+rake aborted!
+NoMethodError: undefined method `update' for nil:NilClass
+/home/cristian/CryptoApp/lib/tasks/demo.rake:372:in `block (3 levels) in <top (required)>'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:365:in `each'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:365:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => bch_history:demo
+(See full trace by running task with --trace)

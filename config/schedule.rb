@@ -22,85 +22,140 @@
 #end
 #--------------------------------------------------------------
 
+
+# Cryptocurrency history
+
+#1
+set :output, 'log/btc_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'btc_history:demo', environment => 'development'
+end
+
+#2
+set :output, 'log/eth_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'eth_history:demo', environment => 'development'
+end
+
+#3
+set :output, 'log/eos_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'eos_history:demo', environment => 'development'
+end
+
+#4
+set :output, 'log/nem_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'nem_history:demo', environment => 'development'
+end
+
+#5
+set :output, 'log/xrp_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'xrp_history:demo', environment => 'development'
+end
+
+#6
+set :output, 'log/bch_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'bch_history:demo', environment => 'development'
+end
+
+#7
+set :output, 'log/ada_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'ada_history:demo', environment => 'development'
+end
+
+#8
+set :output, 'log/neo_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'neo_history:demo', environment => 'development'
+end
+
+#9
+set :output, 'log/ltc_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'ltc_history:demo', environment => 'development'
+end
+
+#10
+set :output, 'log/xlm_history.log'
+every 1.hours, by_timezone: 'Santiago' do
+    rake 'xlm_history:demo', environment => 'development'
+end
+
+#NEWS
+set :output, 'log/news.log'
+every 8.hours, by_timezone: 'Santiago' do
+    rake "news:demo", environment => "development"
+end
+
+#TOP TEN CRYPTOCURRENCIES
+=begin
+#1
+set :output, 'log/btc.log'
+every 2.minute, by_timezone: 'Santiago' do
+    rake "btc:demo", environment => "development"
+end
+
+#2
 set :output, 'log/eth.log'
 every 2.minute do
   rake 'eth:demo', environment => 'development'
 end
-=begin
-set :output, 'log/btc.log'
-every 2.minute do
-    rake "btc:demo", environment => "development"
-end
 
+#3
 set :output, 'log/ltc.log'
 every 2.minute do
     rake "ltc:demo", environment => "development"
 end
 
+#4
 set :output, 'log/xrp.log'
 every 2.minute do
     rake "xrp:demo", environment => "development"
 end
 
-set :output, 'log/xmr.log'
-every 2.minute do
-    rake "xmr:demo", environment => "development"
-end
-
-set :output, 'log/doge.log'
-every 2.minute do
-    rake "doge:demo", environment => "development"
-end
-
-set :output, 'log/nxt.log'
-every 2.minute do
-    rake "nxt:demo", environment => "development"
-end
-
+#5
 set :output, 'log/nem.log'
 every 2.minute do
     rake "nem:demo", environment => "development"
 end
 
-set :output, 'log/blk.log'
-every 2.minute do
-    rake "blk:demo", environment => "development"
-end
-
-set :output, 'log/pot.log'
-every 2.minute do
-    rake "pot:demo", environment => "development"
-end
-
-set :output, 'log/verge.log'
-every 2.minute do
-    rake "verge:demo", environment => "development"
-end
-
+#6
 set :output, 'log/neo.log'
 every 2.minute do
     rake "neo:demo", environment => "development"
 end
 
-set :output, 'log/gnt.log'
+#7
+set :output, 'log/ada.log'
 every 2.minute do
-    rake "gnt:demo", environment => "development"
+    rake "ada:demo", environment => "development"
 end
 
-set :output, 'log/ios.log'
+#8
+set :output, 'log/bch.log'
 every 2.minute do
-    rake "ios:demo", environment => "development"
+    rake "bch:demo", environment => "development"
 end
 
-set :output, 'log/ont.log'
+#9
+set :output, 'log/xlm.log'
 every 2.minute do
-    rake "ont:demo", environment => "development"
+    rake "xlm:demo", environment => "development"
 end
+
+#10
+set :output, 'log/eos.log'
+every 2.minute do
+    rake "eos:demo", environment => "development"
+end
+
+
+
 =end
-set :output, 'log/news.log'
-every 8.hours do
-    rake "news:demo", environment => "development"
-end
 #Comando para actualizar la cron tab: whenever -w --set environment=development
 #Agregar environment => "development" al rake task in schedule.rb
 # Learn more: http://github.com/javan/whenever

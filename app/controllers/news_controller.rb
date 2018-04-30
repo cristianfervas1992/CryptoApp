@@ -17,7 +17,7 @@ class NewsController < ApplicationController
           title: noticia.title,
           url: noticia.url,
           body: noticia.body,
-          published_on: noticia.published_on,
+          published_on: Time.at(noticia.published_on),
           image_url: noticia.imageurl,
           categories: noticia.categories,
           tags: noticia.tags

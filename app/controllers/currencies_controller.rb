@@ -1,14 +1,12 @@
 class CurrenciesController < ApplicationController
 
   def index  
-    require 'httparty'
+    # require 'httparty'
+    
+    
     # @coinsnap = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('ETH', 'USD'))
-    @exchangeName = Exchange.all
-    @currencies = Cryptocurrency.all
-    #Variacion de precio de bitcoin cada 5 min
-    response = HTTParty.get('http://coincap.io/history/1day/DOGE')
-    response.parsed_response
-    @obj=Hashie::Mash.new(response)
+    # @exchangeName = Exchange.all
+    # @currencies = Cryptocurrency.all
     # @price = Hashie::Mash.new(Cryptocompare::CoinSnapshot.find('BTC', 'USD'))
     # @price_btc = Hashie::Mash.new(Cryptocompare::Price.find('BTC', 'USD', {'e' => 'LocalBitcoins'}))
     # @fullPrice = Cryptocompare::Price.full('BTC', 'USD')
