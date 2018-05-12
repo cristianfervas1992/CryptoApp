@@ -5,10 +5,6 @@ module V1
             get do
                 present Cryptohistory.all, with: Entities::CryptohistoryEntity
             end
-            get ':cryptocurrency_id/cryptocurrencies' do
-                present Cryptohistories.find(params[:cryptocurrency_id])
-                
-            end
         end
     end
 end

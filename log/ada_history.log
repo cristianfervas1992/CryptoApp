@@ -1,3 +1,11 @@
+Hecho!!
+Hecho!!
+FATAL: Listen error: unable to monitor directories for changes.
+Visit https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers for info on how to fix this.
+FATAL: Listen error: unable to monitor directories for changes.
+Visit https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers for info on how to fix this.
+Hecho!!
+Hecho!!
 rake aborted!
 NoMethodError: undefined method `update' for nil:NilClass
 /home/cristian/CryptoApp/lib/tasks/demo.rake:390:in `block (3 levels) in <top (required)>'
@@ -8,3 +16,111 @@ NoMethodError: undefined method `update' for nil:NilClass
 /home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
 Tasks: TOP => ada_history:demo
 (See full trace by running task with --trace)
+rake aborted!
+Faraday::ConnectionFailed: Failed to open TCP connection to min-api.cryptocompare.com:443 (getaddrinfo: Temporary failure in name resolution)
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:78:in `perform_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:38:in `block in call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:85:in `with_net_http_connection'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:33:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/request/url_encoded.rb:15:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/rack_builder.rb:143:in `build_response'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:387:in `run_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:138:in `get'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday.rb:103:in `method_missing'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/cryptocompare-0.14.0/lib/cryptocompare/histo_hour.rb:78:in `find'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:380:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+
+Caused by:
+SocketError: Failed to open TCP connection to min-api.cryptocompare.com:443 (getaddrinfo: Temporary failure in name resolution)
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:78:in `perform_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:38:in `block in call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:85:in `with_net_http_connection'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:33:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/request/url_encoded.rb:15:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/rack_builder.rb:143:in `build_response'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:387:in `run_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:138:in `get'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday.rb:103:in `method_missing'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/cryptocompare-0.14.0/lib/cryptocompare/histo_hour.rb:78:in `find'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:380:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+
+Caused by:
+SocketError: getaddrinfo: Temporary failure in name resolution
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:78:in `perform_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:38:in `block in call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:85:in `with_net_http_connection'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:33:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/request/url_encoded.rb:15:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/rack_builder.rb:143:in `build_response'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:387:in `run_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:138:in `get'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday.rb:103:in `method_missing'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/cryptocompare-0.14.0/lib/cryptocompare/histo_hour.rb:78:in `find'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:380:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => ada_history:demo
+(See full trace by running task with --trace)
+rake aborted!
+NoMethodError: undefined method `update' for nil:NilClass
+/home/cristian/CryptoApp/lib/tasks/demo.rake:390:in `block (3 levels) in <top (required)>'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `each'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => ada_history:demo
+(See full trace by running task with --trace)
+rake aborted!
+NoMethodError: undefined method `update' for nil:NilClass
+/home/cristian/CryptoApp/lib/tasks/demo.rake:390:in `block (3 levels) in <top (required)>'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `each'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => ada_history:demo
+(See full trace by running task with --trace)
+rake aborted!
+NoMethodError: undefined method `update' for nil:NilClass
+/home/cristian/CryptoApp/lib/tasks/demo.rake:390:in `block (3 levels) in <top (required)>'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `each'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => ada_history:demo
+(See full trace by running task with --trace)
+rake aborted!
+NoMethodError: undefined method `update' for nil:NilClass
+/home/cristian/CryptoApp/lib/tasks/demo.rake:390:in `block (3 levels) in <top (required)>'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `each'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => ada_history:demo
+(See full trace by running task with --trace)
+rake aborted!
+NoMethodError: undefined method `update' for nil:NilClass
+/home/cristian/CryptoApp/lib/tasks/demo.rake:390:in `block (3 levels) in <top (required)>'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `each'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:383:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => ada_history:demo
+(See full trace by running task with --trace)
+Hecho!!
+Hecho!!
+Hecho!!
+Hecho!!
+Hecho!!
+Hecho!!

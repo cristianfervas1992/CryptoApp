@@ -1,5 +1,108 @@
+Hecho!!
+Hecho!!
+FATAL: Listen error: unable to monitor directories for changes.
+Visit https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers for info on how to fix this.
+FATAL: Listen error: unable to monitor directories for changes.
+Visit https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers for info on how to fix this.
+Hecho!!
+Hecho!!
+Hecho!!
 rake aborted!
-NoMethodError: undefined method `update' for nil:NilClass
+Faraday::ConnectionFailed: execution expired
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:78:in `perform_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:38:in `block in call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:85:in `with_net_http_connection'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:33:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/request/url_encoded.rb:15:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/rack_builder.rb:143:in `build_response'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:387:in `run_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:138:in `get'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday.rb:103:in `method_missing'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/cryptocompare-0.14.0/lib/cryptocompare/histo_hour.rb:78:in `find'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:470:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+
+Caused by:
+Net::OpenTimeout: execution expired
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:78:in `perform_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:38:in `block in call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:85:in `with_net_http_connection'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/adapter/net_http.rb:33:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/request/url_encoded.rb:15:in `call'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/rack_builder.rb:143:in `build_response'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:387:in `run_request'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday/connection.rb:138:in `get'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/faraday-0.14.0/lib/faraday.rb:103:in `method_missing'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/cryptocompare-0.14.0/lib/cryptocompare/histo_hour.rb:78:in `find'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:470:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => nem_history:demo
+(See full trace by running task with --trace)
+Hecho!!
+rake aborted!
+ActiveRecord::StatementInvalid: PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+: BEGIN
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:131:in `begin_db_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:130:in `initialize'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:156:in `new'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:156:in `block in begin_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:152:in `begin_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:193:in `block in within_new_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/persistence.rb:283:in `update'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:480:in `block (3 levels) in <top (required)>'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:473:in `each'
+/home/cristian/CryptoApp/lib/tasks/demo.rake:473:in `block (2 levels) in <top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+
+Caused by:
+PG::UnableToSend: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:131:in `begin_db_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:130:in `initialize'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:156:in `new'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:156:in `block in begin_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:152:in `begin_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:193:in `block in within_new_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:210:in `transaction'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+/home/cristian/.rvm/gems/ruby-2.4.1/gems/activerecord-5.1.4/lib/active_record/persistence.rb:283:in `update'
 /home/cristian/CryptoApp/lib/tasks/demo.rake:480:in `block (3 levels) in <top (required)>'
 /home/cristian/CryptoApp/lib/tasks/demo.rake:473:in `each'
 /home/cristian/CryptoApp/lib/tasks/demo.rake:473:in `block (2 levels) in <top (required)>'
@@ -8,3 +111,12 @@ NoMethodError: undefined method `update' for nil:NilClass
 /home/cristian/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
 Tasks: TOP => nem_history:demo
 (See full trace by running task with --trace)
+Hecho!!
+Hecho!!
+Hecho!!
+Hecho!!
+Hecho!!
+Hecho!!
+Hecho!!
+Hecho!!
+Hecho!!

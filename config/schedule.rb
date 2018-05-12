@@ -154,7 +154,6 @@ every 2.minute do
 end
 
 
-
 =end
 #Comando para actualizar la cron tab: whenever -w --set environment=development
 #Agregar environment => "development" al rake task in schedule.rb

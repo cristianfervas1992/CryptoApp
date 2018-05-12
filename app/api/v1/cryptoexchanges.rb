@@ -5,7 +5,6 @@ module V1
             get do
                 present Cryptoexchange.all, with: Entities::CryptoexchangeEntity
             end
-            
             post do
                 Cryptoexchange.create_with_params(params)
             end

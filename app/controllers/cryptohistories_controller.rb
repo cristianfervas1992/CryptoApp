@@ -11,7 +11,7 @@ class CryptohistoriesController < ApplicationController
     #  Precio: price=t.second 
     #end
     #@json=Hashie::Mash.new(Cryptocompare::HistoHour.find('BTC', 'USD'))
-    addCryptohistory()
+    #addCryptohistory()
     #updateCryptohistory()
     
   end

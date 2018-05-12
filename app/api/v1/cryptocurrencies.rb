@@ -19,7 +19,10 @@ module V1
                 currency = Cryptocurrency.find(params[:id])
                 present currency.cryptoexchanges
             end
-
+            get ':id/histories' do
+                currency = Cryptocurrency.find(params[:id])
+                present currency.cryptohistories
+            end
             post do
                 Cryptocurrency.create_with_params(params)
             end

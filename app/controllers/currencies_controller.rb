@@ -20,7 +20,7 @@ class CurrenciesController < ApplicationController
   end
 
   def AddCurrencies
-    Cryptocurrency.delete_all
+    #Cryptocurrency.delete_all
     @symbols = Hashie::Mash.new(Cryptocompare::CoinList.all) 
     @symbols.Data.each do |t|
       Cryptocurrency.create(id: t.second.Id, name: t.second.CoinName.to_s, fullname: t.second.FullName.to_s, img_url: t.second.ImageUrl.to_s, symbol:  t.second.Symbol.to_s)
@@ -28,7 +28,7 @@ class CurrenciesController < ApplicationController
   end
 
   def AddExchanges
-    Exchange.delete_all
+    #Exchange.destroy_all
     @exchanges = Hashie::Mash.new(Cryptocompare::Exchanges.all)
     @exchanges.each do |t|
       Exchange.create(name: t.first.to_s, coins_number: t.second.count.to_i)
@@ -36,7 +36,7 @@ class CurrenciesController < ApplicationController
   end
 
   def RelationCurrencyExchange
-    Cryptoexchange.delete_all
+    #Cryptoexchange.delete_all
     @exchanges = Hashie::Mash.new(Cryptocompare::Exchanges.all)
     @exchanges.each do |t|
       if(!Exchange.find_by(name: t.first.to_s).nil?)
